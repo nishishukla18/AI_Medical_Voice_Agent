@@ -6,6 +6,7 @@ import Features from "./components/Features"
 import Layout from './pages/Layout';
 import { BrowserRouter, Routes, Route } from "react-router";
 import VoiceCall from './components/VoiceCall';
+import History from './components/History';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path="/features" element={<Features/>} />
       <Route path="/voicecall" element={<VoiceCall />} />
       <Route path="/dashboard" element={<Dashboard/>}/>
+       <Route path="/history" element={<History/>} />
       </Route>
     </Routes>
   </BrowserRouter>,
