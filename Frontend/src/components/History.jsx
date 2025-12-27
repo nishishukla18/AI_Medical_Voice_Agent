@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 function History() {
   const [analytics, setAnalytics] = useState([]);
@@ -8,7 +9,7 @@ function History() {
   useEffect(() => {
     const fetchAnalytics = async () => {
       try {
-        const res = await fetch("http://localhost:5000/api/ai/analytics");
+        const res = await fetch(`${BASE_URL}/api/ai/analytics`);
         if (!res.ok) throw new Error("Failed to fetch analytics");
 
         const data = await res.json();

@@ -180,6 +180,7 @@
 import React, { useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
+const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 function VoiceCall() {
   const [listening, setListening] = useState(false);
   const [language, setLanguage] = useState("en-US");
@@ -230,7 +231,7 @@ function VoiceCall() {
     try {
       setLoading(true);
 
-      const res = await fetch("http://localhost:5000/api/ai/ask", {
+      const res = await fetch(`${BASE_URL}/api/ai/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -284,7 +285,7 @@ function VoiceCall() {
     setLoading(false);
 
     try {
-      await fetch("http://localhost:5000/api/ai/end-session", {
+      await fetch(`${BASE_URL}/api/ai/end-session`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ sessionMessages }),
