@@ -27,7 +27,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
+          {/* <div>
             <h3 className="text-white font-medium mb-3">
               Quick Links
             </h3>
@@ -48,7 +48,7 @@ export default function Footer() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Support */}
           <div>
@@ -76,7 +76,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        {/* <div className="mt-8 pt-4 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
+        <div className="mt-8 pt-4 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-neutral-400">
           <p>© {currentYear} MediAI. All rights reserved.</p>
 
           <div className="flex gap-4">
@@ -90,7 +90,7 @@ export default function Footer() {
               GitHub
             </a>
           </div>
-        </div> */}
+        </div>
 
       </div>
     </footer>
