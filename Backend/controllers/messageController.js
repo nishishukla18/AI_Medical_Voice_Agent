@@ -15,7 +15,7 @@ export const getMessages = async (req, res) => {
       WHERE created_at > NOW() - INTERVAL '5 days' 
       ORDER BY created_at DESC
     `;
-    res.json(rows); // rows is already an array
+    res.json(rows);
   } catch (err) {
     console.error("Error fetching messages:", err);
     res.status(500).json({ error: "Failed to fetch messages" });
@@ -42,7 +42,7 @@ export const postMessage = async (req, res) => {
       return res.status(500).json({ error: "Failed to insert message" });
     }
 
-    res.json(rows[0]); // rows is an array
+    res.json(rows[0]);
   } catch (err) {
     console.error("Error posting message:", err);
     res.status(500).json({ error: "Failed to post message" });
